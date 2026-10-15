@@ -1,0 +1,330 @@
+.metrc-lookup {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* METRC UID input section */
+.metrc-input {
+  padding: 22px;
+  background: #fff;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.metrc-input > label {
+  display: block;
+  margin-bottom: 10px;
+  color: #526a84;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.metrc-input-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.metrc-input-row input {
+  flex: 1;
+  min-width: 0;
+  height: 38px;
+  padding: 6px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 18px;
+  box-sizing: border-box;
+}
+
+.submit-button,
+.post-button {
+  min-height: 38px;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: #0875f5;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:disabled,
+.post-save-button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* Result area and information card */
+.audit-result {
+  padding: 50px 5%;
+}
+
+.audit-details {
+  padding: 20px 24px 28px;
+  border-radius: 18px;
+  background: #fff;
+  box-sizing: border-box;
+  width: 1500px;
+}
+
+.audit-record {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.audit-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.audit-field label {
+  color: #526a84;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.audit-field-value {
+  min-height: 38px;
+  padding: 7px 12px;
+  border-bottom: 2px dashed #718096;
+  border-radius: 6px 6px 2px 2px;
+  background: #e8eaed;
+  color: #17212e;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+  box-sizing: border-box;
+}
+
+.result-message {
+  text-align: center;
+  color: #526a84;
+  font-size: 16px;
+}
+
+/* Fixed bottom buttons */
+.bottom-buttons {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+  width: 100%;
+  min-height: 66px;
+  padding: 12px 22px;
+  box-sizing: border-box;
+  border: 1px solid #aab4c0;
+  border-radius: 8px 8px 0 0;
+  background: #fff;
+  box-shadow: 0 -2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.ok-button {
+  padding: 9px 14px;
+  border: none;
+  border-radius: 12px;
+  background: #0875f5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.clear-button {
+  padding: 9px 10px;
+  border: none;
+  background: transparent;
+  color: #0875f5;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* POST modal */
+.post-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.post-modal {
+  width: 100%;
+  max-width: 450px;
+  max-height: 85vh;
+  overflow-y: auto;
+  padding: 24px;
+  border-radius: 10px;
+  background: #fff;
+  box-sizing: border-box;
+}
+
+.post-modal h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #17212e;
+}
+
+.post-modal > label {
+  display: block;
+  margin: 12px 0 6px;
+  color: #526a84;
+  font-weight: 700;
+}
+
+.post-modal > input {
+  width: 100%;
+  height: 40px;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.post-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.post-save-button,
+.post-cancel-button {
+  min-width: 90px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.post-save-button {
+  background: #0875f5;
+  color: #fff;
+}
+
+.post-cancel-button {
+  background: #e8eaed;
+  color: #17212e;
+}
+
+/* Full-page loading overlay for GET and POST */
+.page-loading-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.page-loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  color: #282424;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.page-loading-spinner {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #ddd;
+  border-top-color: #0875f5;
+  border-radius: 50%;
+  animation: page-spin 0.8s linear infinite;
+}
+
+@keyframes page-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Smaller screens */
+@media (max-width: 600px) {
+  .metrc-input {
+    padding: 16px;
+  }
+
+  .metrc-input-row {
+    flex-wrap: wrap;
+  }
+
+  .metrc-input-row input {
+    flex-basis: 100%;
+  }
+
+.audit-result {
+  flex: 0 0 600px;
+  width: 100%;
+  height: 600px;
+  min-height: 600px;
+  max-height: 600px;
+
+  padding: 24px 16px;
+  background: #f3f4f6;
+  border: 12px solid #ffffff;
+  border-radius: 17px;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+  .audit-details {
+    padding: 18px;
+  }
+
+  .post-modal {
+    padding: 20px;
+  }
+}
+
+.new-quantity-field {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.new-quantity-field label {
+  font-weight: 600;
+  color: #333;
+}
+
+.new-quantity-field input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.ok-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
